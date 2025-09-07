@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --fg-color: #fff;
+    --bg-color: #000;
+    --img-size: 250px;
+}
+
+
+body {
+    margin: 0;
+    padding: 1rem;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-family: "STIX Two Text", serif;
+    font-size: 48px;
+    padding: 0;
+    margin: 10px;
+}
+
+.gallery {
+    column-count: auto;
+    column-width: var(--img-size);
+    column-gap: 5px;
+}
+
+
+figure {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+figcaption {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0;
+    align-content: center;
+    font-size: 22px;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li img {
+    width: var(--img-size);
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+li figcaption {
+    opacity: 1;
+    font-size:28px;
+}
+
+li figcaption:hover {
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 12px 4px #000;
+    transition: background-color 1s;
+}
+
+a {
+    color: var(--fg-color);
+}
